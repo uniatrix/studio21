@@ -22,12 +22,18 @@ const VideoPlayer = ({
   const [duration, setDuration] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [progressWidth, setProgressWidth] = useState(0);
+  const [isVideoReady, setIsVideoReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const handlePlay = () => {
     setIsPlaying(true);
     setIsLoading(true);
+
+    // Start preloading immediately when play is clicked
+    if (videoRef.current) {
+      videoRef.current.load();
+    }
   };
 
   const togglePlayPause = () => {
@@ -57,6 +63,19 @@ const VideoPlayer = ({
     if (videoRef.current) {
       setDuration(videoRef.current.duration);
     }
+  };
+
+  const handleCanPlay = () => {
+    setIsVideoReady(true);
+    // Reduce loading time perception
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 200);
+  };
+
+  const handleLoadedData = () => {
+    // Video has loaded enough data to start playing
+    setIsVideoReady(true);
   };
 
   const handleVideoPlay = () => {
@@ -121,6 +140,29 @@ const VideoPlayer = ({
     }
   };
 
+  // Preload video on component mount for faster loading
+  useEffect(() => {
+    if (videoRef.current) {
+      // Set up video for faster loading
+      videoRef.current.preload = "auto";
+
+      // Start loading the video metadata immediately
+      const video = videoRef.current;
+      video.load();
+
+      // Prefetch some video data
+      const handleCanPlayThrough = () => {
+        setIsVideoReady(true);
+      };
+
+      video.addEventListener("canplaythrough", handleCanPlayThrough);
+
+      return () => {
+        video.removeEventListener("canplaythrough", handleCanPlayThrough);
+      };
+    }
+  }, [videoSrc]);
+
   // Cleanup interval on unmount
   useEffect(() => {
     return () => {
@@ -169,10 +211,14 @@ const VideoPlayer = ({
             ref={videoRef}
             src={videoSrc}
             autoPlay
-            preload="metadata"
+            preload="auto"
+            playsInline
+            muted={isMuted}
             className="w-full aspect-video object-cover"
             onTimeUpdate={handleTimeUpdate}
             onLoadedMetadata={handleLoadedMetadata}
+            onLoadedData={handleLoadedData}
+            onCanPlay={handleCanPlay}
             onPlay={handleVideoPlay}
             onPause={handleVideoPause}
             onEnded={handleEnded}

@@ -8,12 +8,8 @@ const HeroSection = () => {
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-7xl font-bold text-white leading-tight">
             Digital Products
-            <span className="block mt-2">
-              That Actually Sell
-            </span>
-            <span className="block mt-2">
-              And How To Sell Them
-            </span>
+            <span className="block mt-2">That Actually Sell</span>
+            <span className="block mt-2">And How To Sell Them</span>
           </h1>
         </div>
 
@@ -36,17 +32,24 @@ const HeroSection = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                  <strong>1,000,000+ ready-to-sell digital products</strong> that transformed me from a struggling 9-to-5 worker into a successful digital entrepreneur. No tech skills required.
+                  <strong>1,000,000+ ready-to-sell digital products</strong>{" "}
+                  that transformed me from a struggling 9-to-5 worker into a
+                  successful digital entrepreneur. No tech skills required.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <Button variant="cta" size="xl" className="w-full lg:w-auto text-xl px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse">
-                  I want to start selling digital products easily
+                <Button
+                  variant="cta"
+                  size="xl"
+                  className="w-full lg:w-auto text-xl px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse"
+                >
+                  I want to start selling digital products
                 </Button>
                 <div className="flex justify-center">
                   <p className="text-base text-muted-foreground mt-6">
-                    ✓ Instant access • ✓ Lifetime vault access • ✓ No monthly fees
+                    ✓ Instant access • ✓ Lifetime vault access • ✓ No
+                    monthly fees
                   </p>
                 </div>
               </div>
