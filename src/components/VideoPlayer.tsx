@@ -216,9 +216,9 @@ const VideoPlayer = ({
               {/* Subtle glow effect */}
               <div className="absolute inset-0 bg-red-500/20 rounded-full blur-lg animate-pulse scale-125"></div>
               {/* Main button */}
-              <div className="relative bg-gradient-to-br from-red-500 to-red-600 hover:from-red-400 hover:to-red-500 rounded-full p-6 shadow-2xl transform transition-all duration-300 group-hover:scale-110">
+              <div className="relative bg-gradient-to-br from-red-500 to-red-600 hover:from-red-400 hover:to-red-500 rounded-full p-4 md:p-6 shadow-2xl transform transition-all duration-300 group-hover:scale-110">
                 <Play
-                  className="w-12 h-12 text-white ml-1"
+                  className="w-8 h-8 md:w-12 md:h-12 text-white ml-1"
                   fill="currentColor"
                 />
               </div>
