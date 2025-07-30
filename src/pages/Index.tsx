@@ -1,0 +1,23 @@
+import HeroSection from "@/components/HeroSection";
+import StorySection from "@/components/StorySection";
+import ProductSection from "@/components/ProductSection";
+import TargetSection from "@/components/TargetSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import FAQSection from "@/components/FAQSection";
+import CTASection from "@/components/CTASection";
+
+const Index = () => {
+  return (
+    <div className="min-h-screen">
+      <HeroSection />
+      <StorySection />
+      <ProductSection />
+      <TargetSection />
+      <TestimonialsSection />
+      <FAQSection />
+      <CTASection />
+    </div>
+  );
+};
+
+export default Index;
