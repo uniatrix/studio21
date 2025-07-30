@@ -25,7 +25,7 @@ const CTASection = () => {
             </p>
           </div>
           <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
-            <div className="text-3xl mb-3">♾︝</div>
+            <div className="text-3xl mb-3">♾</div>
             <h3 className="font-semibold mb-2">Lifetime Access</h3>
             <p className="text-sm opacity-80">
               Keep everything forever, including future updates
@@ -75,7 +75,7 @@ const CTASection = () => {
 
         {/* Social Proof */}
         <div className="mt-16 bg-white/5 p-8 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
-          <div className="text-3xl mb-4">⭝⭝⭝⭝⭝</div>
+          <div className="text-3xl mb-4">⭐⭐⭐⭐⭐</div>
           <blockquote className="text-lg italic mb-4">
             "I went from zero to $3,200 in my first 60 days using your system.
             The products are incredible and your strategy guide is pure gold.
