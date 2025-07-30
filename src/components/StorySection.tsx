@@ -1,35 +1,9 @@
 import { Button } from "@/components/ui/button";
-import VideoPlayer from "@/components/VideoPlayer";
 
 const StorySection = () => {
   return (
     <section className="py-20 px-4 bg-background overflow-x-hidden">
       <div className="max-w-4xl mx-auto w-full">
-        {/* Video Section with Attention-Grabbing Text */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/20 rounded-full px-6 py-2 mb-4">
-            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-            <span className="text-red-500 font-semibold text-sm uppercase tracking-wide">
-              MUST WATCH
-            </span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            🎯 The Exact Story Behind My $8,900/Month Success
-          </h2>
-        </div>
-
-        {/* Video Player */}
-        <div className="flex justify-center mb-16 w-full">
-          <div className="max-w-4xl w-full shadow-xl overflow-hidden">
-            <VideoPlayer
-              videoSrc="/lovable-uploads/vslstudio21.mp4"
-              thumbnailSrc="/lovable-uploads/coffe.png"
-              alt="My journey from skeptic to success - Watch my complete transformation story"
-              className="rounded-2xl overflow-hidden"
-            />
-          </div>
-        </div>
-
         {/* Hero Section */}
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-12 flex items-center justify-center gap-3">

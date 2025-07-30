@@ -1,16 +1,29 @@
 import { Button } from "@/components/ui/button";
+import VideoPlayer from "@/components/VideoPlayer";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-subtle-gradient flex items-center justify-center px-4 py-20">
+    <section className="relative bg-subtle-gradient px-4 pt-8 pb-20">
       <div className="max-w-6xl mx-auto">
-        {/* Main Heading - Always at top */}
+        {/* Main Heading - Now visible on all devices */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-7xl font-bold text-white leading-tight">
             Digital Products
             <span className="block mt-2">That Actually Sell</span>
             <span className="block mt-2">And How To Sell Them</span>
           </h1>
+        </div>
+
+        {/* Video Player */}
+        <div className="flex justify-center mb-12 w-full">
+          <div className="max-w-4xl w-full shadow-xl overflow-hidden">
+            <VideoPlayer
+              videoSrc="/lovable-uploads/vslstudio21.mp4"
+              thumbnailSrc="/lovable-uploads/coffe.png"
+              alt="My journey from skeptic to success - Watch my complete transformation story"
+              className="rounded-2xl overflow-hidden"
+            />
+          </div>
         </div>
 
         {/* Mobile-first layout */}
