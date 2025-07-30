@@ -71,10 +71,10 @@ const TestimonialsSection = () => {
   ];
 
   const stats = [
-    { number: "10,000+", label: "Success Stories" },
-    { number: "$2.3M+", label: "Student Revenue Generated" },
+    { number: "500+", label: "Success Stories" },
+    { number: "$1M+", label: "Student Revenue Generated" },
     { number: "4.9/5", label: "Average Rating" },
-    { number: "30 Days", label: "Average Time to First Sale" },
+    { number: "6 Days", label: "Average Time to First Sale" },
   ];
 
   return (
