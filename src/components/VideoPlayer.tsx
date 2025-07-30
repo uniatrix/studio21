@@ -25,6 +25,8 @@ const VideoPlayer = ({
   const [isVideoReady, setIsVideoReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const startTimeRef = useRef<number>(0);
+  const pausedTimeRef = useRef<number>(0);
 
   const handlePlay = () => {
     setIsPlaying(true);
@@ -86,6 +88,8 @@ const VideoPlayer = ({
 
   const handleVideoPause = () => {
     setIsVideoPlaying(false);
+    // Store the current elapsed time when pausing
+    pausedTimeRef.current = (Date.now() - startTimeRef.current) / 1000;
     stopProgressAnimation();
   };
 
@@ -94,6 +98,8 @@ const VideoPlayer = ({
     setIsVideoPlaying(false);
     setCurrentTime(0);
     setProgressWidth(0);
+    startTimeRef.current = 0;
+    pausedTimeRef.current = 0;
     stopProgressAnimation();
   };
 
@@ -104,10 +110,17 @@ const VideoPlayer = ({
 
     const totalDuration = 126; // 2:06 minutes in seconds
     const fastPhase = 15; // First 15 seconds fill more naturally
-    const startTime = Date.now();
+
+    // If this is the first time playing, set start time. Otherwise, adjust for paused time
+    if (startTimeRef.current === 0) {
+      startTimeRef.current = Date.now();
+    } else {
+      // Adjust start time to account for the time that was paused
+      startTimeRef.current = Date.now() - pausedTimeRef.current * 1000;
+    }
 
     progressIntervalRef.current = setInterval(() => {
-      const elapsed = (Date.now() - startTime) / 1000;
+      const elapsed = (Date.now() - startTimeRef.current) / 1000;
 
       if (elapsed <= fastPhase) {
         // Fast phase: fill up to 60% in first 15 seconds with easing
