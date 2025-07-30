@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 import LoadingSpinner from "./LoadingSpinner";
 
@@ -21,7 +21,9 @@ const VideoPlayer = ({
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+  const [progressWidth, setProgressWidth] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const handlePlay = () => {
     setIsPlaying(true);
@@ -60,17 +62,73 @@ const VideoPlayer = ({
   const handleVideoPlay = () => {
     setIsVideoPlaying(true);
     setIsLoading(false);
+    startProgressAnimation();
   };
 
   const handleVideoPause = () => {
     setIsVideoPlaying(false);
+    stopProgressAnimation();
   };
 
   const handleEnded = () => {
     setIsPlaying(false);
     setIsVideoPlaying(false);
     setCurrentTime(0);
+    setProgressWidth(0);
+    stopProgressAnimation();
   };
+
+  const startProgressAnimation = () => {
+    if (progressIntervalRef.current) {
+      clearInterval(progressIntervalRef.current);
+    }
+
+    const totalDuration = 126; // 2:06 minutes in seconds
+    const fastPhase = 15; // First 15 seconds fill more naturally
+    const startTime = Date.now();
+
+    progressIntervalRef.current = setInterval(() => {
+      const elapsed = (Date.now() - startTime) / 1000;
+
+      if (elapsed <= fastPhase) {
+        // Fast phase: fill up to 60% in first 15 seconds with easing
+        const progress = elapsed / fastPhase;
+        // Apply easing function for more natural feel
+        const easedProgress = 1 - Math.pow(1 - progress, 2);
+        setProgressWidth(Math.min(easedProgress * 60, 60));
+      } else {
+        // Slow phase: fill remaining 40% over the remaining time
+        const remainingTime = totalDuration - fastPhase;
+        const remainingElapsed = elapsed - fastPhase;
+        const remainingProgress = remainingElapsed / remainingTime;
+        // Smoother transition with slight easing
+        const easedRemainingProgress = remainingProgress * remainingProgress;
+        setProgressWidth(Math.min(60 + easedRemainingProgress * 40, 100));
+      }
+
+      // Stop when we reach the end
+      if (elapsed >= totalDuration) {
+        setProgressWidth(100);
+        clearInterval(progressIntervalRef.current!);
+      }
+    }, 150);
+  };
+
+  const stopProgressAnimation = () => {
+    if (progressIntervalRef.current) {
+      clearInterval(progressIntervalRef.current);
+      progressIntervalRef.current = null;
+    }
+  };
+
+  // Cleanup interval on unmount
+  useEffect(() => {
+    return () => {
+      if (progressIntervalRef.current) {
+        clearInterval(progressIntervalRef.current);
+      }
+    };
+  }, []);
 
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60);
@@ -139,8 +197,16 @@ const VideoPlayer = ({
             onClick={togglePlayPause}
           />
 
+          {/* Progress Bar */}
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
+            <div
+              className="h-full bg-white transition-all duration-100 ease-linear"
+              style={{ width: `${progressWidth}%` }}
+            />
+          </div>
+
           {/* Custom Controls Overlay */}
-          <div className="absolute bottom-0 right-0 p-4 z-10">
+          <div className="absolute bottom-2 right-0 p-4 z-10">
             <div className="flex items-center text-white">
               {/* Mute Button */}
               <button
