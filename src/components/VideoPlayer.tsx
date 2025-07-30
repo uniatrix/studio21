@@ -153,40 +153,25 @@ const VideoPlayer = ({
     }
   };
 
-  // Aggressive preloading for fastest possible loading
+  // Preload video on component mount for faster loading
   useEffect(() => {
     if (videoRef.current) {
+      // Set up video for faster loading
+      videoRef.current.preload = "auto";
+
+      // Start loading the video metadata immediately
       const video = videoRef.current;
-
-      // Set up for maximum loading speed
-      video.preload = "auto";
-      video.crossOrigin = "anonymous";
-
-      // Start loading immediately
       video.load();
 
-      // Multiple event listeners for faster detection
-      const handleCanPlay = () => setIsVideoReady(true);
-      const handleCanPlayThrough = () => setIsVideoReady(true);
-      const handleLoadedData = () => setIsVideoReady(true);
-
-      video.addEventListener("canplay", handleCanPlay);
-      video.addEventListener("canplaythrough", handleCanPlayThrough);
-      video.addEventListener("loadeddata", handleLoadedData);
-
-      // Prefetch by seeking to start
-      const handleLoadedMetadata = () => {
-        video.currentTime = 0.1; // Seek slightly forward to trigger buffering
-        video.currentTime = 0; // Reset to start
+      // Prefetch some video data
+      const handleCanPlayThrough = () => {
+        setIsVideoReady(true);
       };
 
-      video.addEventListener("loadedmetadata", handleLoadedMetadata);
+      video.addEventListener("canplaythrough", handleCanPlayThrough);
 
       return () => {
-        video.removeEventListener("canplay", handleCanPlay);
         video.removeEventListener("canplaythrough", handleCanPlayThrough);
-        video.removeEventListener("loadeddata", handleLoadedData);
-        video.removeEventListener("loadedmetadata", handleLoadedMetadata);
       };
     }
   }, [videoSrc]);
@@ -209,78 +194,50 @@ const VideoPlayer = ({
   return (
     <div className={`relative ${className}`}>
       {!isPlaying ? (
-        // Thumbnail with attention-grabbing elements
-        <div
-          className="relative cursor-pointer group video-thumbnail-glow"
-          onClick={handlePlay}
-        >
+        // Thumbnail with subtle attention-grabbing elements
+        <div className="relative cursor-pointer group" onClick={handlePlay}>
           <img
             src={thumbnailSrc}
             alt={alt}
             className="w-full aspect-video object-cover rounded-2xl"
-            loading="eager"
-            decoding="sync"
+            loading="lazy"
+            decoding="async"
           />
 
-          {/* Animated gradient overlay */}
+          {/* Enhanced gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 rounded-2xl"></div>
 
-          {/* Pulsing border effect */}
-          <div className="absolute inset-0 rounded-2xl border-4 border-red-500/60 animate-pulse"></div>
+          {/* Subtle pulsing border */}
+          <div className="absolute inset-0 rounded-2xl border-2 border-red-500/40 animate-pulse"></div>
 
-          {/* Animated corner indicators */}
-          <div className="absolute top-2 left-2 w-6 h-6 border-l-4 border-t-4 border-red-500 animate-pulse"></div>
-          <div className="absolute top-2 right-2 w-6 h-6 border-r-4 border-t-4 border-red-500 animate-pulse"></div>
-          <div className="absolute bottom-2 left-2 w-6 h-6 border-l-4 border-b-4 border-red-500 animate-pulse"></div>
-          <div className="absolute bottom-2 right-2 w-6 h-6 border-r-4 border-b-4 border-red-500 animate-pulse"></div>
-
-          {/* Enhanced Play Button with glow effect */}
+          {/* Enhanced Play Button */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative video-float">
-              {/* Multiple glowing rings */}
-              <div className="absolute inset-0 bg-red-500/20 rounded-full blur-2xl animate-ping scale-200"></div>
-              <div className="absolute inset-0 bg-yellow-400/20 rounded-full blur-xl animate-pulse scale-175"></div>
-              <div className="absolute inset-0 bg-red-500/30 rounded-full blur-xl animate-pulse scale-150"></div>
+            <div className="relative">
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 bg-red-500/20 rounded-full blur-lg animate-pulse scale-125"></div>
               {/* Main button */}
-              <div className="relative bg-gradient-to-br from-red-500 to-red-600 hover:from-red-400 hover:to-red-500 rounded-full p-8 shadow-2xl transform transition-all duration-300 group-hover:scale-125 animate-bounce border-4 border-white/20">
+              <div className="relative bg-gradient-to-br from-red-500 to-red-600 hover:from-red-400 hover:to-red-500 rounded-full p-6 shadow-2xl transform transition-all duration-300 group-hover:scale-110">
                 <Play
-                  className="w-16 h-16 text-white ml-2"
+                  className="w-12 h-12 text-white ml-1"
                   fill="currentColor"
                 />
               </div>
-              {/* Rotating ring around button */}
-              <div className="absolute inset-0 border-4 border-transparent border-t-yellow-400 border-r-yellow-400 rounded-full animate-spin scale-125"></div>
             </div>
           </div>
 
-          {/* Attention-grabbing top banner */}
-          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-red-600 to-red-500 text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg animate-pulse">
-            ?? WATCH NOW - FREE ??
+          {/* Attention-grabbing top badge */}
+          <div className="absolute top-4 left-1/2 bg-gradient-to-r from-red-600 to-red-500 text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wide shadow-lg scale-pulse">
+            WATCH NOW
           </div>
 
           {/* Bottom call-to-action */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/80 text-white px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
-            ?? Click to Discover My Secret
+          <div className="absolute bottom-4 left-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">
+            My Success Story
           </div>
 
-          {/* Floating elements for extra attention */}
-          <div
-            className="absolute top-1/4 left-4 text-yellow-400 text-2xl animate-bounce"
-            style={{ animationDelay: "0.5s" }}
-          >
-            ?
-          </div>
-          <div
-            className="absolute top-1/3 right-6 text-yellow-400 text-xl animate-bounce"
-            style={{ animationDelay: "1s" }}
-          >
-            ??
-          </div>
-          <div
-            className="absolute bottom-1/3 left-6 text-green-400 text-xl animate-bounce"
-            style={{ animationDelay: "1.5s" }}
-          >
-            ??
+          {/* Duration indicator */}
+          <div className="absolute bottom-4 right-4 bg-black/80 text-white px-2 py-1 rounded text-xs font-medium backdrop-blur-sm">
+            2:06
           </div>
         </div>
       ) : (
@@ -301,8 +258,6 @@ const VideoPlayer = ({
             onPlay={handleVideoPlay}
             onPause={handleVideoPause}
             onEnded={handleEnded}
-            // Optimization attributes
-            crossOrigin="anonymous"
             // Disable right-click context menu
             onContextMenu={(e) => e.preventDefault()}
             // Disable keyboard shortcuts
