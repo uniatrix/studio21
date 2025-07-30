@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
+import LoadingSpinner from "./LoadingSpinner";
 
 interface VideoPlayerProps {
   videoSrc: string;
@@ -19,10 +20,12 @@ const VideoPlayer = ({
   const [isMuted, setIsMuted] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handlePlay = () => {
     setIsPlaying(true);
+    setIsLoading(true);
   };
 
   const togglePlayPause = () => {
@@ -56,6 +59,7 @@ const VideoPlayer = ({
 
   const handleVideoPlay = () => {
     setIsVideoPlaying(true);
+    setIsLoading(false);
   };
 
   const handleVideoPause = () => {
@@ -83,6 +87,8 @@ const VideoPlayer = ({
             src={thumbnailSrc}
             alt={alt}
             className="w-full aspect-video object-cover rounded-2xl"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
 
@@ -105,6 +111,7 @@ const VideoPlayer = ({
             ref={videoRef}
             src={videoSrc}
             autoPlay
+            preload="metadata"
             className="w-full aspect-video object-cover"
             onTimeUpdate={handleTimeUpdate}
             onLoadedMetadata={handleLoadedMetadata}
@@ -118,6 +125,13 @@ const VideoPlayer = ({
           >
             Your browser does not support the video tag.
           </video>
+
+          {/* Loading Spinner */}
+          {isLoading && (
+            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+              <LoadingSpinner className="text-white" />
+            </div>
+          )}
 
           {/* Click overlay for play/pause */}
           <div

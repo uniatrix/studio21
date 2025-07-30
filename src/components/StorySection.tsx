@@ -157,6 +157,8 @@ const StorySection = () => {
               src="/lovable-uploads/21b7633e-4ed7-427e-9574-35e21657aed4.png"
               alt="My journey to success"
               className="w-full h-[400px] object-cover"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
           </div>
@@ -184,6 +186,8 @@ const StorySection = () => {
                 src="/lovable-uploads/studio21.png"
                 alt="Studio21 Software Bundle"
                 className="w-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>

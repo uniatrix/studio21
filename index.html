@@ -4,6 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Resource Hints for Performance -->
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  <link rel="preload" href="/lovable-uploads/coffe.png" as="image" type="image/png">
+  <link rel="preload" href="/lovable-uploads/vslstudio21.mp4" as="video" type="video/mp4">
   <title>Studio21 - 1M+ PLR Digital Products Vault</title>
   <meta name="description"
     content="Get instant access to 1,000,000+ ready-to-sell PLR digital products. Templates, courses, designs & more. Start your profitable digital business today with our proven system." />
@@ -33,6 +39,22 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+
+  <!-- Performance optimization -->
+  <script>
+    // Preload critical images when page loads
+    window.addEventListener('load', function () {
+      const criticalImages = [
+        '/lovable-uploads/21b7633e-4ed7-427e-9574-35e21657aed4.png',
+        '/lovable-uploads/studio21.png'
+      ];
+
+      criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    });
+  </script>
 </body>
 
 </html>

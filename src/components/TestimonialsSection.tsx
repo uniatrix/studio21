@@ -118,6 +118,8 @@ const TestimonialsSection = () => {
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full object-cover mr-3 border-2 border-border"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="flex-1">
                   <div className="font-semibold text-foreground">
