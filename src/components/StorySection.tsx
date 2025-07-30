@@ -3,8 +3,8 @@ import VideoPlayer from "@/components/VideoPlayer";
 
 const StorySection = () => {
   return (
-    <section className="py-20 px-4 bg-background">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-20 px-4 bg-background overflow-x-hidden">
+      <div className="max-w-4xl mx-auto w-full">
         {/* Video Section with Attention-Grabbing Text */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/20 rounded-full px-6 py-2 mb-4">
@@ -19,8 +19,8 @@ const StorySection = () => {
         </div>
 
         {/* Video Player */}
-        <div className="flex justify-center mb-16">
-          <div className="max-w-4xl w-full shadow-xl">
+        <div className="flex justify-center mb-16 w-full">
+          <div className="max-w-4xl w-full shadow-xl overflow-hidden">
             <VideoPlayer
               videoSrc="/lovable-uploads/vslstudio21.mp4"
               thumbnailSrc="/lovable-uploads/coffe.png"
@@ -135,11 +135,11 @@ const StorySection = () => {
 
             {/* Success Metrics CTA */}
             <div className="pt-12">
-              <div className="flex justify-center">
+              <div className="flex justify-center w-full">
                 <Button
                   variant="destructive"
                   size="lg"
-                  className="text-2xl py-8 px-16 font-bold shadow-lg transform transition-transform duration-1000 animate-slow-pulse"
+                  className="text-lg md:text-2xl py-6 md:py-8 px-8 md:px-16 font-bold shadow-lg transform transition-transform duration-1000 animate-slow-pulse w-full max-w-md mx-auto"
                 >
                   <span className="relative">
                     Want Results Like These? Start Now →

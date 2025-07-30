@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <HeroSection />
       <StorySection />
       <ProductSection />

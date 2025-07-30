@@ -42,9 +42,9 @@ const HeroSection = () => {
                 <Button
                   variant="cta"
                   size="xl"
-                  className="w-full lg:w-auto text-xl px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse"
+                  className="w-full lg:w-auto text-lg md:text-xl px-8 md:px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse"
                 >
-                  I want to start selling digital products
+                  I want to start selling digital products easily
                 </Button>
                 <div className="flex justify-center">
                   <p className="text-base text-muted-foreground mt-6">
@@ -69,9 +69,9 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Background decoration */}
-      <div className="absolute top-20 right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+      {/* Background decoration - positioned to not cause overflow */}
+      <div className="absolute top-20 right-4 md:right-20 w-32 md:w-64 h-32 md:h-64 bg-primary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-4 md:left-20 w-48 md:w-96 h-48 md:h-96 bg-accent/5 rounded-full blur-3xl"></div>
     </section>
   );
 };

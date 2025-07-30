@@ -1,16 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { Clock, Lock, Gift } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-black to-zinc-900 text-white">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="py-20 px-4 bg-gradient-to-br from-black to-zinc-900 text-white overflow-x-hidden">
+      <div className="max-w-4xl mx-auto text-center w-full">
         <div className="mb-12">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Your Digital Freedom Starts Today
           </h2>
           <p className="text-xl opacity-90 leading-relaxed mb-8">
-            The same 1,000,000+ PLR products that gave me my freedom are waiting for you. No monthly fees. No hidden costs. Just instant access to everything you need to start your digital product empire.
+            The same 1,000,000+ PLR products that gave me my freedom are waiting
+            for you. No monthly fees. No hidden costs. Just instant access to
+            everything you need to start your digital product empire.
           </p>
         </div>
 
@@ -19,17 +20,23 @@ const CTASection = () => {
           <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
             <div className="text-3xl mb-3">⚡</div>
             <h3 className="font-semibold mb-2">Instant Access</h3>
-            <p className="text-sm opacity-80">Download everything immediately after purchase</p>
+            <p className="text-sm opacity-80">
+              Download everything immediately after purchase
+            </p>
           </div>
           <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
-            <div className="text-3xl mb-3">🔐</div>
+            <div className="text-3xl mb-3">♾️</div>
             <h3 className="font-semibold mb-2">Lifetime Access</h3>
-            <p className="text-sm opacity-80">Keep everything forever, including future updates</p>
+            <p className="text-sm opacity-80">
+              Keep everything forever, including future updates
+            </p>
           </div>
           <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
-            <div className="text-3xl mb-3">🎁</div>
+            <div className="text-3xl mb-3">📦</div>
             <h3 className="font-semibold mb-2">Complete Package</h3>
-            <p className="text-sm opacity-80">Products + my strategy guide + bonuses</p>
+            <p className="text-sm opacity-80">
+              Products + my strategy guide + bonuses
+            </p>
           </div>
         </div>
 
@@ -38,7 +45,7 @@ const CTASection = () => {
           <Button
             variant="cta"
             size="xl"
-            className="text-xl px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse"
+            className="text-lg md:text-xl px-8 md:px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse w-full max-w-md mx-auto"
           >
             🔒 Claim Your Digital Product Vault 🔒
           </Button>
@@ -67,9 +74,13 @@ const CTASection = () => {
         <div className="mt-16 bg-white/5 p-8 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
           <div className="text-3xl mb-4">⭐⭐⭐⭐⭐</div>
           <blockquote className="text-lg italic mb-4">
-            "I went from zero to $3,200 in my first 60 days using your system. The products are incredible and your strategy guide is pure gold. This changed my life."
+            "I went from zero to $3,200 in my first 60 days using your system.
+            The products are incredible and your strategy guide is pure gold.
+            This changed my life."
           </blockquote>
-          <cite className="text-sm opacity-75">— Sarah M., Digital Entrepreneur</cite>
+          <cite className="text-sm opacity-75">
+            — Sarah M., Digital Entrepreneur
+          </cite>
         </div>
 
         {/* Final Trust Elements */}
