@@ -56,6 +56,9 @@ const HeroSection = () => {
                   variant="cta"
                   size="xl"
                   className="w-full lg:w-auto text-lg md:text-xl px-8 md:px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse"
+                  onClick={() =>
+                    window.open("https://ko-fi.com/s/ebc7311aac", "_blank")
+                  }
                 >
                   I want to start selling digital products easily
                 </Button>

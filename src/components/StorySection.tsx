@@ -114,6 +114,9 @@ const StorySection = () => {
                   variant="destructive"
                   size="lg"
                   className="text-lg md:text-2xl py-6 md:py-8 px-8 md:px-16 font-bold shadow-lg transform transition-transform duration-1000 animate-slow-pulse w-full max-w-md mx-auto"
+                  onClick={() =>
+                    window.open("https://ko-fi.com/s/ebc7311aac", "_blank")
+                  }
                 >
                   <span className="relative">
                     Want Results Like These? Start Now →
@@ -147,8 +150,8 @@ const StorySection = () => {
             <div className="space-y-6 text-xl text-muted-foreground max-w-3xl text-center mb-12">
               <p>
                 I created <span className="text-white font-bold">Studio21</span>{" "}
-                — the most comprehensive software bundle that not only gives you
-                powerful tools but teaches you how to sell them.
+                — the most comprehensive software bundle that not only gives
+                you powerful tools but teaches you how to sell them.
               </p>
               <p className="font-semibold">
                 The perfect blend of ready-to-use software and the knowledge to
