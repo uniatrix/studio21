@@ -8,104 +8,126 @@ const StorySection = () => {
         {/* Hero Section */}
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-12 flex items-center justify-center gap-3">
-            <span className="text-amber-400">✨</span>
-            Picture This
+            <span className="text-amber-400">🎯</span>
+            It's Actually Simple
           </h1>
-          <div className="max-w-2xl mx-auto space-y-8 text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            <p className="opacity-90">
-              I wake up to sunlight on my face.
-              <br />
-              No alarm. No meetings. Just calm.
-            </p>
-            <p className="opacity-90">
-              I grab coffee, open my laptop, and check my phone.
-            </p>
+          <div className="max-w-3xl mx-auto space-y-8 text-xl md:text-2xl text-muted-foreground leading-relaxed">
             <div className="bg-card p-8 rounded-xl border border-border shadow-soft my-12">
-              <p className="text-2xl md:text-3xl font-bold text-green-500">
-                <span className="text-2xl">💸</span> $142{" "}
-                <span className="text-foreground">came in while I slept.</span>
-                <br />
-                <span className="text-foreground">Yesterday?</span> $178
-                <span className="text-foreground">.</span>
+              <p className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                <span className="text-amber-400">DEMAND:</span> People need
+                digital products every single day
               </p>
-              <p className="text-xl md:text-2xl mt-3 text-muted-foreground">
-                Digital products I didn't even create—making me real income.
+              <p className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                <span className="text-blue-400">SUPPLY:</span> I've got
+                1,000,000+ products ready to go
+              </p>
+              <p className="text-2xl md:text-3xl font-bold">
+                <span className="text-purple-400">CONNECTION:</span>{" "}
+                <span className="text-white">
+                  I teach you EXACTLY how to approach these clients
+                </span>
               </p>
             </div>
             <p className="font-semibold text-foreground text-2xl md:text-3xl">
-              This is my life now. But it wasn't always.
+              You want to know how? I've put EVERYTHING you need to know in my
+              guide.
             </p>
           </div>
         </div>
 
-        {/* Turning Point Section */}
+        {/* The Reality Section */}
         <div className="mb-20">
           <h2 className="text-5xl font-bold text-foreground mb-8 text-center">
-            💡 The Turning Point
+            💡 Here's The Reality
           </h2>
           <div className="space-y-6 text-xl text-muted-foreground">
             <p className="text-2xl">
-              That's when I found{" "}
-              <strong className="text-yellow-400 font-bold">
-                PLR products
-              </strong>
-              —ready-made digital products I could rebrand and sell as my own.
-              💻 No coding. 🎨 No content creation. 💰 No expensive tools.
+              Every day, thousands of people are desperately searching for:
             </p>
-            <p className="text-3xl font-bold text-foreground text-center my-8">
-              Just:{" "}
-              <div>
-                <span className="text-yellow-400 font-bold">
-                  Download → Personalize → Sell
-                </span>
+            <div className="bg-foreground/5 p-8 rounded-xl border border-foreground/20 mt-8">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <span className="text-3xl">📄</span>
+                  <p className="text-xl text-foreground">
+                    Business templates, resumes
+                  </p>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="text-3xl">🖼️</span>
+                  <p className="text-xl text-foreground">
+                    Logos, social media graphics
+                  </p>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="text-3xl">🎓</span>
+                  <p className="text-xl text-foreground">
+                    Online courses, training materials
+                  </p>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="text-3xl">🔧</span>
+                  <p className="text-xl text-foreground">
+                    Marketing tools, automation
+                  </p>
+                </div>
               </div>
+            </div>
+
+            <p className="text-3xl font-bold text-foreground text-center my-8">
+              <span className="text-yellow-400">That's the DEMAND.</span>
             </p>
-            <br />
+
+            <p className="text-2xl mb-6">
+              Now here's what I've got ready for you:
+            </p>
 
             <div className="bg-foreground/5 p-8 rounded-xl border border-foreground/20 mt-8">
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <span className="text-4xl">🌟</span>
-                  <div>
-                    <p className="text-2xl font-bold text-foreground">
-                      My first month?{" "}
-                      <span className="text-green-500 font-bold">$847</span>
-                    </p>
-                    <p className="text-xl text-muted-foreground">
-                      Not life-changing yet—but for once, it worked.
-                    </p>
-                  </div>
+                  <span className="text-3xl">📁</span>
+                  <p className="text-xl text-foreground">
+                    250,000+ Templates - Ready to use
+                  </p>
                 </div>
-
                 <div className="flex items-center space-x-4">
-                  <span className="text-4xl">🚀</span>
-                  <div>
-                    <p className="text-2xl font-bold text-foreground">
-                      Month 6?{" "}
-                      <span className="text-green-500 font-bold">$4,200</span>
-                    </p>
-                    <p className="text-xl text-muted-foreground">
-                      Things started to really click.
-                    </p>
-                  </div>
+                  <span className="text-3xl">🎭</span>
+                  <p className="text-xl text-foreground">
+                    500,000+ Designs - Professional graphics
+                  </p>
                 </div>
-
                 <div className="flex items-center space-x-4">
-                  <span className="text-4xl">💎</span>
-                  <div>
-                    <p className="text-3xl font-bold text-foreground">
-                      Month 12?{" "}
-                      <span className="text-green-500 font-bold">
-                        $8,900/month
-                      </span>
-                      —and total freedom.
-                    </p>
-                    <p className="text-xl text-muted-foreground">
-                      Finally, I could focus on my family.
-                    </p>
-                  </div>
+                  <span className="text-3xl">🎯</span>
+                  <p className="text-xl text-foreground">
+                    15,000+ Courses - Complete training
+                  </p>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="text-3xl">🚀</span>
+                  <p className="text-xl text-foreground">
+                    175,000+ Marketing Tools - Growth solutions
+                  </p>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <span className="text-3xl">💎</span>
+                  <p className="text-xl text-foreground">
+                    100,000+ Software - Premium apps & plugins
+                  </p>
                 </div>
               </div>
+            </div>
+
+            <p className="text-3xl font-bold text-foreground text-center my-8">
+              <span className="text-blue-400">That's the SUPPLY.</span>
+            </p>
+
+            <div className="bg-card p-8 rounded-xl border border-border shadow-soft my-12">
+              <p className="text-3xl font-bold text-center text-green-500 mb-6">
+                The missing piece? Knowing HOW to connect them.
+              </p>
+              <p className="text-xl text-center text-muted-foreground">
+                Where to find these clients. What to say. How to approach them.
+                How to close the deal.
+              </p>
             </div>
 
             {/* Success Metrics CTA */}
@@ -121,7 +143,7 @@ const StorySection = () => {
                   }}
                 >
                   <span className="relative">
-                    Want Results Like These? Start Now →
+                    Show Me How To Connect The Dots →
                   </span>
                 </Button>
               </div>
@@ -134,7 +156,7 @@ const StorySection = () => {
           <div className="relative overflow-hidden rounded-2xl shadow-xl max-w-md">
             <img
               src="/lovable-uploads/21b7633e-4ed7-427e-9574-35e21657aed4.png"
-              alt="My journey to success"
+              alt="Supply meets demand"
               className="w-full h-[400px] object-cover"
               loading="lazy"
               decoding="async"
@@ -143,51 +165,137 @@ const StorySection = () => {
           </div>
         </div>
 
-        {/* Studio21 Creation Section */}
+        {/* Gabriel's Story Section */}
         <div className="mb-20">
-          <h2 className="text-5xl font-bold text-foreground mb-8 text-center">
-            🚀 And after all that...
-          </h2>
-          <div className="flex flex-col items-center mb-12">
-            <div className="space-y-6 text-xl text-muted-foreground max-w-3xl text-center mb-12">
-              <p>
-                I created <span className="text-white font-bold">Studio21</span>{" "}
-                — the most comprehensive software bundle that not only gives
-                you powerful tools but teaches you how to sell them.
-              </p>
-              <p className="font-semibold">
-                The perfect blend of ready-to-use software and the knowledge to
-                turn them into a profitable business.
-              </p>
-            </div>
-            <div className="relative overflow-hidden rounded-2xl shadow-xl max-w-2xl transform hover:scale-[1.02] transition-transform duration-300">
-              <img
-                src="/lovable-uploads/studio21.png"
-                alt="Studio21 Software Bundle"
-                className="w-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-12">
+              {/* Text Content */}
+              <div className="space-y-6">
+                <h2 className="text-4xl font-bold text-foreground mb-6">
+                  Hi, I'm Gabriel 👋
+                </h2>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  A few years ago, I was exactly where you might be right now.
+                  Frustrated, overwhelmed, and tired of trying "opportunities"
+                  that led nowhere.
+                </p>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  That's when I discovered the power of connecting supply with
+                  demand. I found Studio21 and realized this wasn't just another
+                  product collection—it was the missing piece I'd been searching
+                  for.
+                </p>
+                <p className="text-xl text-foreground font-semibold">
+                  Now I'm here to help others in my shoes. Because I know
+                  exactly what it feels like to need a real solution that
+                  actually works.
+                </p>
+              </div>
+
+              {/* Studio21 Logo */}
+              <div className="flex justify-center">
+                <div className="relative overflow-hidden rounded-2xl shadow-xl max-w-2xl transform hover:scale-[1.02] transition-transform duration-300">
+                  <img
+                    src="/lovable-uploads/studio21.png"
+                    alt="Studio21 Complete System"
+                    className="w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* What Worked vs What Didn't Section */}
+        {/* My System Section */}
+        <div className="mb-20">
+          <h2 className="text-5xl font-bold text-foreground mb-8 text-center">
+            My Complete System
+          </h2>
+          <div className="flex flex-col items-center mb-12">
+            <div className="space-y-6 text-xl text-muted-foreground max-w-3xl text-center mb-12">
+              <p className="text-2xl font-bold text-center mb-8">
+                Think of me as your{" "}
+                <span className="text-amber-400">connection coach</span> who's
+                already done the hard work.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-gradient-to-br from-blue-900/20 to-blue-800/10 p-6 rounded-xl border border-blue-700/30">
+                  <div className="text-3xl mb-3">🎯</div>
+                  <h4 className="text-xl font-bold text-blue-400 mb-2">
+                    The Hunt
+                  </h4>
+                  <p className="text-foreground">
+                    I'll show you the exact platforms, communities, and spaces
+                    where your ideal clients are actively looking for solutions
+                    RIGHT NOW.
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-purple-900/20 to-purple-800/10 p-6 rounded-xl border border-purple-700/30">
+                  <div className="text-3xl mb-3">💬</div>
+                  <h4 className="text-xl font-bold text-purple-400 mb-2">
+                    The Script
+                  </h4>
+                  <p className="text-foreground">
+                    Word-for-word templates and conversation starters that get
+                    responses. No more wondering "what do I say?"
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-green-900/20 to-green-800/10 p-6 rounded-xl border border-green-700/30">
+                  <div className="text-3xl mb-3">🎭</div>
+                  <h4 className="text-xl font-bold text-green-400 mb-2">
+                    The Positioning
+                  </h4>
+                  <p className="text-foreground">
+                    How to present yourself as THE solution they've been
+                    searching for, not just another seller.
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-amber-900/20 to-amber-800/10 p-6 rounded-xl border border-amber-700/30">
+                  <div className="text-3xl mb-3">💰</div>
+                  <h4 className="text-xl font-bold text-amber-400 mb-2">
+                    The Close
+                  </h4>
+                  <p className="text-foreground">
+                    My proven system for turning conversations into sales, from
+                    first contact to payment received.
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center bg-gradient-to-r from-indigo-900/30 to-purple-900/30 p-6 rounded-xl border border-indigo-700/30">
+                <p className="text-xl font-bold text-white mb-2">
+                  🚀 PLUS: 1,000,000+ Ready-to-Sell Products
+                </p>
+                <p className="text-muted-foreground">
+                  The complete arsenal to back up every conversation you have
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* What Works vs What Doesn't Section */}
         <div className="grid md:grid-cols-2 gap-8 mb-8">
-          {/* What Didn't Work */}
+          {/* What Doesn't Work */}
           <div className="bg-red-950/10 p-8 rounded-xl border border-red-900/20">
             <h3 className="text-2xl font-bold text-foreground mb-6">
-              What I Tried (That Didn't Work):
+              What Most People Do (That Fails):
             </h3>
             <div className="space-y-4">
               {[
-                "Building from scratch",
-                "Spending months creating online courses",
-                "Gambling on 'big ideas' with zero demand",
-                "Running ads and hoping something would stick",
-                "Waiting months to launch anything",
-                "Burning out before I even made a sale",
+                "Create products without knowing if there's demand",
+                "Spend months building something nobody wants",
+                "Hope customers will magically find them",
+                "Guess what clients need instead of knowing",
+                "Try to compete on price instead of value",
+                "Give up before they find the right approach",
               ].map((item, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <span className="text-2xl text-red-500 flex-shrink-0">
@@ -199,19 +307,19 @@ const StorySection = () => {
             </div>
           </div>
 
-          {/* What Worked */}
+          {/* What Works */}
           <div className="bg-green-950/10 p-8 rounded-xl border border-green-900/20">
             <h3 className="text-2xl font-bold text-foreground mb-6">
-              What Worked for Me:
+              What Actually Works:
             </h3>
             <div className="space-y-4">
               {[
-                "Selling proven digital products that people already want",
-                "Starting in hours—not months",
-                "Keeping 100% profit from every sale",
-                "No coding, no tech hurdles",
-                "Rebranding existing PLR content",
-                "Scaling to real freedom with no team and no fluff",
+                "Start with proven products people already need",
+                "Know exactly where your clients hang out",
+                "Approach them with confidence and clarity",
+                "Offer solutions to problems they already have",
+                "Follow a tested system that works",
+                "Scale by connecting more supply with more demand",
               ].map((item, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <span className="text-2xl text-green-500 flex-shrink-0">

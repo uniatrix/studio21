@@ -35,7 +35,7 @@ const ProductSection = () => {
       count: "75,000+",
     },
     {
-      icon: "💻",
+      icon: "⚙️",
       title: "Code Snippets",
       description: "Website templates, plugins, software tools",
       count: "100,000+",
@@ -52,24 +52,27 @@ const ProductSection = () => {
   ];
 
   return (
-    <section className="py-4 px-4 bg-subtle-gradient">
+    <section className="py-2 px-4 bg-subtle-gradient">
       <div className="max-w-6xl mx-auto">
+        <h2 className="text-5xl font-bold text-foreground mb-8 text-center">
+          What You'll Get
+        </h2>
         {/* Vault Section */}
         <div className="bg-card p-6 rounded-2xl shadow-soft border border-border">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-4xl font-bold text-foreground mb-8 text-center flex items-center justify-center gap-3">
-              <span className="text-3xl">🔓</span>
-              What You'll Get Inside the Vault
+              <span className="text-3xl">📦</span>
+              Your Complete Supply Arsenal
             </h3>
 
             {/* Main Benefits */}
             <div className="space-y-4 mb-16">
               {[
-                "1,000,000+ Ready-to-Sell Digital Products",
-                "Templates, courses, Canva designs, marketing kits, and more",
+                "1,000,000+ Products That People Need Daily",
+                "Templates, courses, designs, tools — everything in demand",
                 "Full commercial rights",
                 "Instant access — no monthly fees",
-                "My complete step-by-step personal strategy guide",
+                "My complete guide on HOW to find and approach clients",
               ].map((item, index) => (
                 <div
                   key={index}
@@ -127,15 +130,15 @@ const ProductSection = () => {
             <div className="text-center space-y-8 mt-16">
               <h3 className="text-4xl font-bold text-foreground flex items-center justify-center gap-3">
                 <span className="text-3xl">🎯</span>
-                Ready to Start?
+                Ready to Connect Supply with Demand?
               </h3>
 
               <div className="space-y-4 text-xl text-muted-foreground">
-                <p>This worked for me and for hundreds of others.</p>
+                <p>The demand is there. The supply is ready.</p>
                 <p className="font-semibold">
-                  I'm not special. I just stopped guessing…
+                  All you need is the connection strategy.
                   <br />
-                  and started selling things that actually work.
+                  I'll show you exactly how to make it happen.
                 </p>
               </div>
 
@@ -149,7 +152,9 @@ const ProductSection = () => {
                     window.open("https://ko-fi.com/s/ebc7311aac", "_blank");
                   }}
                 >
-                  <span className="relative">👉 Access the Vault Now</span>
+                  <span className="relative">
+                    👉 Get My Connection System Now
+                  </span>
                 </Button>
 
                 <p className="text-lg text-muted-foreground">

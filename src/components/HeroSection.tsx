@@ -9,9 +9,9 @@ const HeroSection = () => {
         {/* Main Heading - Now visible on all devices */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-7xl font-bold text-white leading-tight">
-            Digital Products
-            <span className="block mt-2">That Actually Sell</span>
-            <span className="block mt-2">And How To Sell Them</span>
+            People Need These Products
+            <span className="block mt-2">Every Single Day</span>
+            <span className="block mt-2">I'll Show You How To Supply Them</span>
           </h1>
         </div>
 
@@ -46,9 +46,10 @@ const HeroSection = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                  <strong>1,000,000+ ready-to-sell digital products</strong>{" "}
-                  that transformed me from a struggling 9-to-5 worker into a
-                  successful digital entrepreneur. No tech skills required.
+                  <strong>Daily demand meets ready supply.</strong> I've got
+                  1,000,000+ products people desperately need, and I'll teach
+                  you EXACTLY how to connect the dots and approach these
+                  clients. No guesswork.
                 </p>
               </div>
 
@@ -62,7 +63,7 @@ const HeroSection = () => {
                     window.open("https://ko-fi.com/s/ebc7311aac", "_blank");
                   }}
                 >
-                  I want to start selling digital products easily
+                  Show me how to connect supply with demand
                 </Button>
                 <div className="flex justify-center">
                   <p className="text-base text-muted-foreground mt-6">

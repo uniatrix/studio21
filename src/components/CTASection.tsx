@@ -7,12 +7,12 @@ const CTASection = () => {
       <div className="max-w-4xl mx-auto text-center w-full">
         <div className="mb-12">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Your Digital Freedom Starts Today
+            Stop Guessing. Start Connecting.
           </h2>
           <p className="text-xl opacity-90 leading-relaxed mb-8">
-            The same 1,000,000+ PLR products that gave me my freedom are waiting
-            for you. No monthly fees. No hidden costs. Just instant access to
-            everything you need to start your digital product empire.
+            The demand exists. The supply is ready. You just need the exact
+            system to connect them. No guesswork. No trial and error. Just a
+            proven method that works.
           </p>
         </div>
 
@@ -52,21 +52,21 @@ const CTASection = () => {
               window.open("https://ko-fi.com/s/ebc7311aac", "_blank");
             }}
           >
-            🔒 Claim Your Digital Product Vault 🔒
+            🎯 Get My Complete Connection System 🎯
           </Button>
 
           <div className="text-sm opacity-90 space-y-3 mt-8">
             <p className="flex items-center justify-center gap-2">
               <span className="text-green-400 text-xl">✓</span>
-              <span>1,000,000+ Ready-to-Sell PLR Products</span>
+              <span>1,000,000+ In-Demand Products</span>
             </p>
             <p className="flex items-center justify-center gap-2">
               <span className="text-green-400 text-xl">✓</span>
-              <span>My Own Complete Personal Strategy Guide</span>
+              <span>My Complete Client Connection Strategy</span>
             </p>
             <p className="flex items-center justify-center gap-2">
               <span className="text-green-400 text-xl">✓</span>
-              <span>Lifetime Vault Access + Future Updates</span>
+              <span>Lifetime Access + All Future Updates</span>
             </p>
             <p className="flex items-center justify-center gap-2">
               <span className="text-green-400 text-xl">✓</span>
@@ -79,9 +79,9 @@ const CTASection = () => {
         <div className="mt-16 bg-white/5 p-8 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
           <div className="text-3xl mb-4">⭐⭐⭐⭐⭐</div>
           <blockquote className="text-lg italic mb-4">
-            "I went from zero to $3,200 in my first 60 days using your system.
-            The products are incredible and your strategy guide is pure gold.
-            This changed my life."
+            "Finally someone who shows you WHERE to find clients and EXACTLY
+            what to say. I made $3,200 in my first 60 days just by following
+            your connection strategy. This changed everything."
           </blockquote>
           <cite className="text-sm opacity-75">
             — Sarah M., Digital Entrepreneur
