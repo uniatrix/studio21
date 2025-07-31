@@ -146,7 +146,7 @@ const ProductSection = () => {
                 <Button
                   size="lg"
                   variant="destructive"
-                  className="text-2xl py-6 px-12 font-bold shadow-lg transform transition-transform duration-1000 animate-slow-pulse"
+                  className="w-full text-lg md:text-2xl py-6 px-4 md:px-12 font-bold shadow-lg transform transition-transform duration-1000 animate-slow-pulse"
                   onClick={() => {
                     trackInitiateCheckout();
                     window.open("https://ko-fi.com/s/ebc7311aac", "_blank");
