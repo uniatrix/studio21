@@ -175,20 +175,24 @@ const StorySection = () => {
                   Hi, I'm Gabriel 👋
                 </h2>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  A few years ago, I was exactly where you might be right now.
-                  Frustrated, overwhelmed, and tired of trying "opportunities"
-                  that led nowhere.
+                  A few years ago, I started trying to sell digital products
+                  online. Like most people, I jumped in without a real plan,
+                  just hoping something would work.
                 </p>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  That's when I discovered the power of connecting supply with
-                  demand. I found Studio21 and realized this wasn't just another
-                  product collection—it was the missing piece I'd been searching
-                  for.
+                  After several failed attempts, I realized the products weren't
+                  the problem. It was knowing HOW to find clients and WHAT to
+                  say that made all the difference. I spent months perfecting a
+                  method that works for any niche.
+                </p>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  That's when I created Studio21: the complete package combining
+                  1,000,000+ proven products with my step-by-step client
+                  acquisition system.
                 </p>
                 <p className="text-xl text-foreground font-semibold">
-                  Now I'm here to help others in my shoes. Because I know
-                  exactly what it feels like to need a real solution that
-                  actually works.
+                  Now I'm here to help others skip the trial and error. You get
+                  both the products AND the exact method to sell them.
                 </p>
               </div>
 

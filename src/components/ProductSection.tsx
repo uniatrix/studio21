@@ -69,9 +69,9 @@ const ProductSection = () => {
             <div className="space-y-4 mb-16">
               {[
                 "1,000,000+ Products That People Need Daily",
-                "Templates, courses, designs, tools — everything in demand",
+                "Templates, courses, designs, tools. Everything in demand",
                 "Full commercial rights",
-                "Instant access — no monthly fees",
+                "Instant access. No monthly fees",
                 "My complete guide on HOW to find and approach clients",
               ].map((item, index) => (
                 <div
