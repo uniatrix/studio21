@@ -57,13 +57,14 @@ const HeroSection = () => {
                 <Button
                   variant="cta"
                   size="xl"
-                  className="w-full lg:w-auto text-lg md:text-xl px-8 md:px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse"
+                  className="w-full lg:w-auto text-sm sm:text-lg md:text-xl px-4 sm:px-8 md:px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse whitespace-normal leading-tight"
                   onClick={() => {
                     trackInitiateCheckout();
                     window.open("https://ko-fi.com/s/ebc7311aac", "_blank");
                   }}
                 >
-                  Show me how to connect supply with demand
+                  <span className="block sm:inline">Get me started</span>
+                  <span className="block sm:inline"> right now</span>
                 </Button>
                 <div className="flex justify-center">
                   <p className="text-base text-muted-foreground mt-6">

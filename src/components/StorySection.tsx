@@ -143,7 +143,7 @@ const StorySection = () => {
                   }}
                 >
                   <span className="relative">
-                    Show Me How To Connect The Dots →
+                    Show Me The Complete System →
                   </span>
                 </Button>
               </div>

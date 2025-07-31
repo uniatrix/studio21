@@ -52,7 +52,7 @@ const CTASection = () => {
               window.open("https://ko-fi.com/s/ebc7311aac", "_blank");
             }}
           >
-            🎯 Get My Complete Connection System 🎯
+            🔥 Yes, I'm Ready To Begin 🔥
           </Button>
 
           <div className="text-sm opacity-90 space-y-3 mt-8">
