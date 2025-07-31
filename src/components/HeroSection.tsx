@@ -57,14 +57,13 @@ const HeroSection = () => {
                 <Button
                   variant="cta"
                   size="xl"
-                  className="w-full lg:w-auto text-sm sm:text-lg md:text-xl px-4 sm:px-8 md:px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse whitespace-normal leading-tight"
+                  className="w-full lg:w-auto text-lg sm:text-xl md:text-2xl px-4 sm:px-8 md:px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse font-bold"
                   onClick={() => {
                     trackInitiateCheckout();
                     window.open("https://ko-fi.com/s/ebc7311aac", "_blank");
                   }}
                 >
-                  <span className="block sm:inline">Get me started</span>
-                  <span className="block sm:inline"> right now</span>
+                  Get Me Started Right Now
                 </Button>
                 <div className="flex justify-center">
                   <p className="text-base text-muted-foreground mt-6">
