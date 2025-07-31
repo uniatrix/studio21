@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import VideoPlayer from "@/components/VideoPlayer";
+import { trackInitiateCheckout } from "@/utils/fbPixel";
 
 const HeroSection = () => {
   return (
@@ -56,16 +57,17 @@ const HeroSection = () => {
                   variant="cta"
                   size="xl"
                   className="w-full lg:w-auto text-lg md:text-xl px-8 md:px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse"
-                  onClick={() =>
-                    window.open("https://ko-fi.com/s/ebc7311aac", "_blank")
-                  }
+                  onClick={() => {
+                    trackInitiateCheckout();
+                    window.open("https://ko-fi.com/s/ebc7311aac", "_blank");
+                  }}
                 >
                   I want to start selling digital products easily
                 </Button>
                 <div className="flex justify-center">
                   <p className="text-base text-muted-foreground mt-6">
-                    ✓ Instant access • ✓ Lifetime vault access • ✓ No
-                    monthly fees
+                    ✓ Instant access • ✓ Lifetime vault access • ✓ No monthly
+                    fees
                   </p>
                 </div>
               </div>

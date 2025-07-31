@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { trackInitiateCheckout } from "@/utils/fbPixel";
 
 const CTASection = () => {
   return (
@@ -46,9 +47,10 @@ const CTASection = () => {
             variant="cta"
             size="xl"
             className="text-lg md:text-xl px-8 md:px-16 py-6 h-auto transform transition-transform duration-1000 animate-slow-pulse w-full max-w-md mx-auto"
-            onClick={() =>
-              window.open("https://ko-fi.com/s/ebc7311aac", "_blank")
-            }
+            onClick={() => {
+              trackInitiateCheckout();
+              window.open("https://ko-fi.com/s/ebc7311aac", "_blank");
+            }}
           >
             🔒 Claim Your Digital Product Vault 🔒
           </Button>

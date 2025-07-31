@@ -1,5 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackInitiateCheckout } from "@/utils/fbPixel";
 
 const ProductSection = () => {
   const productTypes = [
@@ -143,9 +144,10 @@ const ProductSection = () => {
                   size="lg"
                   variant="destructive"
                   className="text-2xl py-6 px-12 font-bold shadow-lg transform transition-transform duration-1000 animate-slow-pulse"
-                  onClick={() =>
-                    window.open("https://ko-fi.com/s/ebc7311aac", "_blank")
-                  }
+                  onClick={() => {
+                    trackInitiateCheckout();
+                    window.open("https://ko-fi.com/s/ebc7311aac", "_blank");
+                  }}
                 >
                   <span className="relative">👉 Access the Vault Now</span>
                 </Button>

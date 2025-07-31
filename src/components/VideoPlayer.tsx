@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 import LoadingSpinner from "./LoadingSpinner";
+import { trackVideoPlay } from "@/utils/fbPixel";
 
 interface VideoPlayerProps {
   videoSrc: string;
@@ -31,6 +32,9 @@ const VideoPlayer = ({
   const handlePlay = () => {
     setIsPlaying(true);
     setIsLoading(true);
+
+    // Track video play event
+    trackVideoPlay();
 
     // Start preloading immediately when play is clicked
     if (videoRef.current) {
